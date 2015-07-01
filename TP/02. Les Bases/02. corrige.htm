@@ -10,7 +10,7 @@
 			["Italie",13],
 			["Angleterre",13]
 			);
-			coul = new Array("FFFFCC","CCFFFF");
+			coul = new Array("cc0000","CCFFFF");
 			aff_tab = aff_liste = "";
 			for (i = 0; i < tab_pays.length; i++) {
 			     aff_tab += "<tr bgcolor=\"#"+coul[i%2]+"\"><td>"+tab_pays[i][0]+"</td><td>"+tab_pays[i][1]+"</td></tr>" ;
@@ -25,9 +25,9 @@
 				<th>Pays</th>
 				<th>Frais</th>
 			</tr>
-			<script language="javascript" type="text/javascript">
-			     document.write(aff_tab);
-			</script>
+                        <script language="javascript" type="text/javascript">
+                            document.write(aff_tab);
+                        </script>
 		</table>
 		<h2>Choisissez votre pays</h2>
 		<form>

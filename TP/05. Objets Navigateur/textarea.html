@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Textarea avec JSon</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <script type="text/javascript" language="javascript">
+        $(document).on('mouseup','body',function()
+        {
+            $("#debug").html("You select '" + getSelectionText() + "'");
+            });
+
+            function getSelectionText() {
+                if (window.getSelection) {
+                    try {
+                        // return "" in firefox
+                        return window.getSelection().toString();
+                    } catch (e) {
+                        console.log('Cant get selection text')
+                    }
+                } 
+                // For IE
+                if (document.selection && document.selection.type != "Control") {
+                    return document.selection.createRange().text;
+                }
+        }
+    </script>
+    <style>
+        body {background-color:#000; color:#fff; font-size:20px;}
+        #innerHTML {display:block; 
+                   border:5px solid #cc0000; 
+                   width: 500px; 
+                   height: 150px; 
+                   margin: 100px auto 0 auto; 
+                   border-radius:15px; 
+                   background-color:#000; 
+                   color:#fff; 
+                   font-size:20px; 
+                   font-weight:bold; 
+                   text-transform:uppercase; 
+                   padding:10px; 
+                   font-family: Courrier, Times, sans-serif; 
+                   text-shadow: 5px 25px 4px #fff;}
+    </style>
+    
+    <body>
+        <p>Faire un champs de saisie (textarea) qui met à jour le texte d'un calque au fur et à mesure de la
+saisie.<br /><br />Pour cela, vous allez devoir utiliser les outils suivants:
+            <ul>
+                <li>window.getSelection(), document.getSelection()ou  document.selection.createRange().text;
+                    selon le navigateur</li>
+                <li>document.getElementById("voirtxt") pour la recherche de calque</li>
+                <li>.innerHTML pour remplir le contenu d'une balise</li>
+            </ul>
+        </p>
+        <!-- SECTION TEXTAREA -->
+        <textarea id="innerHTML">Tapez votre texte ici</textarea>
+        <div id="recopiage"></div>
+    </body>
+    
+    
+    
+</html>

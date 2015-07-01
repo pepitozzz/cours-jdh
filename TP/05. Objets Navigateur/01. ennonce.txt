@@ -7,3 +7,11 @@ Pour cela, vous allez devoir utiliser les outils suivants:
 	  selon le navigateur
 	- document.getElementById("voirtxt") pour la recherche de calque
 	- .innerHTML pour remplir le contenu d'une balise
+
+
+<textarea>
+    <p></p>
+
+
+
+</textarea>
